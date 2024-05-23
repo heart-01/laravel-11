@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "laravel-11 Example",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
