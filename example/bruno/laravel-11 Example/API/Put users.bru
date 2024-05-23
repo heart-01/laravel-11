@@ -1,0 +1,17 @@
+meta {
+  name: Put users
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/api/user/2
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "test"
+  }
+}

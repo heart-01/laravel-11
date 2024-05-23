@@ -1,0 +1,17 @@
+meta {
+  name: Add users
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/api/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "test"
+  }
+}
