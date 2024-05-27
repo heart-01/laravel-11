@@ -1,0 +1,15 @@
+meta {
+  name: Read Product By Id
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/products/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6|ezws2TqOcaliMWHGledGyv7vqPKkXVrG1xOuNH3mfdd52eac
+}

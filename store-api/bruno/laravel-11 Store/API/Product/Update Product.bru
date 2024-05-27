@@ -1,0 +1,24 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/api/products/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6|ezws2TqOcaliMWHGledGyv7vqPKkXVrG1xOuNH3mfdd52eac
+}
+
+body:json {
+  {
+    "name": "iPad Pro 2024",
+    "slug": "ipad-pro-2024",
+    "description": "iPad Pro 2024 detail",
+    "price": "45000.00"
+  }
+}
