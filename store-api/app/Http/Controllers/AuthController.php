@@ -56,22 +56,22 @@ class AuthController extends Controller
                 'status' => false,
                 'message' => 'Login failed'
             ], 401);
-        } else {
-            // Delete old token user if exist
-            $user->tokens()->delete();
-
-            // Create token
-            $token = $user->createToken($request->userAgent(), ["$user->role"])->plainTextToken;
-
-            $response = [
-                'status' => true,
-                'message' => 'Login successfully',
-                'user' => $user,
-                'token' => $token
-            ];
-
-            return response($response, 201);
         }
+
+        // Delete old token user if exist
+        $user->tokens()->delete();
+
+        // Create token
+        $token = $user->createToken($request->userAgent(), ["$user->role"])->plainTextToken;
+
+        $response = [
+            'status' => true,
+            'message' => 'Login successfully',
+            'user' => $user,
+            'token' => $token
+        ];
+
+        return response($response, 201);
     }
 
     // Refresh Token
